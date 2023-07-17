@@ -18,8 +18,12 @@ def get_user(user_id):
     return jsonify(user_data), 200
 
 
+@app.route("/create-user/",methods=["POST"])
+def create_user():
+    if request.method == "POST":
+        data = request.get_json()
 
-
+        return jsonify(data), 201
 
 
 
